@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%);
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    height: auto;
+    max-height: none;
+    animation: fadeIn 1s ease-in; 
+    position: relative; 
+    perspective: 1000px; 
+}
+.container:hover {
+    transform: rotateY(5deg) rotateX(5deg); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-family: "Mystery Quest", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    position: relative; 
+    perspective: 1000px;    
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px) rotateX(5deg) rotateY(5deg) scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 2.6em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: "Mystery Quest", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation-delay: 0.5s; 
+}
+p {
+    margin: 20px 0;
+    font-size: 1.6em;
+    color: #666;
+    font-family: "Gabriela", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+#loading {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 10px;
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    button {
+        font-size: 18px;
+        padding: 15px 20px;
+    }
+    p {
+        font-size: 1.2em;
+    }
+    .container:hover {
+        transform: none;
+        box-shadow: none;
+    }
+     button:hover {
+        transform: none;
+        box-shadow: none;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
